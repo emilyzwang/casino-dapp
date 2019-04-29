@@ -11,7 +11,6 @@ class App extends React.Component {
          minimumBet: 2,
          totalBet: 0,
          maxAmountOfBets: 5,
-         timeStart: 0,
          plugInInstalled: true
       }
 
