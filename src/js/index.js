@@ -10,7 +10,6 @@ class App extends React.Component {
          numberOfBets: 0,
          minAmountOfBets: 2,
          maxAmountOfBets: 5,
-         timeStart: 0,
          plugInInstalled: true
       }
 
@@ -87,13 +86,6 @@ class App extends React.Component {
    }
 
    updateState(){
-      this.state.ContractInstance.timeStart((err, result) => {
-         if(result != null){
-            this.setState({
-               timeStart: parseInt(result)
-            })
-         }
-      })
       this.state.ContractInstance.numberOfBets((err, result) => {
          if(result != null){
             this.setState({
@@ -169,7 +161,7 @@ class App extends React.Component {
                      <b>Number of bets:</b> &nbsp;
                      <span>{this.state.numberOfBets}</span>
                   </div>
-                  
+
                   <div className="block">
                      <b>Minimum number of bets:</b> &nbsp;
                      <span>{this.state.minAmountOfBets} </span>
