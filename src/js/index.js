@@ -7,11 +7,10 @@ class App extends React.Component {
    constructor(props){
       super(props)
       this.state = {
-         lastWinner: 0,
          numberOfBets: 0,
-         minimumBet: 0,
+         minimumBet: 2,
          totalBet: 0,
-         maxAmountOfBets: 0,
+         maxAmountOfBets: 5,
          plugInInstalled: true
       }
 
@@ -188,7 +187,7 @@ class App extends React.Component {
 
                <hr></hr>
 
-               <h2>Vote for the next winning number yeee</h2>
+               <h2>Vote for the next winning number yeeet</h2>
 
                <label>
                   <b>How much Ether do you want to bet? <input className="bet-input" ref="ether-bet" type="number" placeholder={this.state.minimumBet}/></b> ether
