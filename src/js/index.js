@@ -8,8 +8,8 @@ class App extends React.Component {
       super(props)
       this.state = {
          numberOfBets: 0,
-         minimumBet: 2,
-         totalBet: 0,
+         minAmountOfBets: 2,
+         // totalBet: 0,
          maxAmountOfBets: 5,
          timeStart: 0,
          plugInInstalled: true
@@ -171,14 +171,14 @@ class App extends React.Component {
                      <span>{this.state.numberOfBets}</span>
                   </div>
 
-                  <div className="block">
-                     <b>Total ether bet:</b> &nbsp;
-                     <span>{this.state.timeStart} ether</span>
-                  </div>
+                  // <div className="block">
+                  //    <b>Total ether bet:</b> &nbsp;
+                  //    <span>{this.state.totalBet} ether</span>
+                  // </div>
 
                   <div className="block">
-                     <b>Minimum bet:</b> &nbsp;
-                     <span>{this.state.minAmountOfBet} ether</span>
+                     <b>Minimum number of bets:</b> &nbsp;
+                     <span>{this.state.minAmountOfBets} </span>
                   </div>
 
                   <div className="block">
