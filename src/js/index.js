@@ -9,7 +9,6 @@ class App extends React.Component {
       this.state = {
          numberOfBets: 0,
          minAmountOfBets: 2,
-         // totalBet: 0,
          maxAmountOfBets: 5,
          timeStart: 0,
          plugInInstalled: true
@@ -170,12 +169,7 @@ class App extends React.Component {
                      <b>Number of bets:</b> &nbsp;
                      <span>{this.state.numberOfBets}</span>
                   </div>
-
-                  // <div className="block">
-                  //    <b>Total ether bet:</b> &nbsp;
-                  //    <span>{this.state.totalBet} ether</span>
-                  // </div>
-
+                  
                   <div className="block">
                      <b>Minimum number of bets:</b> &nbsp;
                      <span>{this.state.minAmountOfBets} </span>
