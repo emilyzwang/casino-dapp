@@ -19,250 +19,58 @@ class App extends React.Component {
          console.log("Using web3 detected from external source like Metamask")
          this.web3 = new Web3(web3.currentProvider);
          const MyContract = this.web3.eth.contract([
-         {
-            "constant": false,
-            "inputs": [
-               {
-                  "name": "numberToBet",
-                  "type": "uint256"
-               }
-            ],
-            "name": "bet",
-            "outputs": [],
-            "payable": true,
-            "stateMutability": "payable",
-            "type": "function"
-         },
-         {
-            "constant": false,
-            "inputs": [],
-            "name": "distributePrizes",
-            "outputs": [],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "function"
-         },
-         {
-            "constant": false,
-            "inputs": [],
-            "name": "generateNumberWinner",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "function"
-         },
-         {
-            "constant": false,
-            "inputs": [],
-            "name": "resetData",
-            "outputs": [],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "function"
-         },
-         {
-            "inputs": [
-               {
-                  "name": "_minimumBet",
-                  "type": "uint256"
-               },
-               {
-                  "name": "_maxAmountOfBets",
-                  "type": "uint256"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "constructor"
-         },
-         {
-            "constant": true,
-            "inputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "name": "bets",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-         },
-         {
-            "constant": true,
-            "inputs": [
-               {
-                  "name": "b",
-                  "type": "bytes32"
-               }
-            ],
-            "name": "bytesToUint",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "pure",
-            "type": "function"
-         },
-         {
-            "constant": true,
-            "inputs": [],
-            "name": "LIMIT_AMOUNT_BETS",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-         },
-         {
-            "constant": true,
-            "inputs": [],
-            "name": "maxAmountOfBets",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-         },
-         {
-            "constant": true,
-            "inputs": [],
-            "name": "minimumBet",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-         },
-         {
-            "constant": true,
-            "inputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               },
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "name": "numberBetPlayers",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "address"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-         },
-         {
-            "constant": true,
-            "inputs": [],
-            "name": "numberOfBets",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-         },
-         {
-            "constant": true,
-            "inputs": [],
-            "name": "numberWinner",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-         },
-         {
-            "constant": true,
-            "inputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "name": "players",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "address"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-         },
-         {
-            "constant": true,
-            "inputs": [],
-            "name": "totalBet",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "uint256"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-         },
-         {
-            "constant": true,
-            "inputs": [
-               {
-                  "name": "x",
-                  "type": "uint256"
-               }
-            ],
-            "name": "uintToBytes",
-            "outputs": [
-               {
-                  "name": "",
-                  "type": "bytes32"
-               }
-            ],
-            "payable": false,
-            "stateMutability": "pure",
-            "type": "function"
-         }
+      	{
+      		"constant": false,
+      		"inputs": [
+      			{
+      				"name": "numberToBet",
+      				"type": "uint256"
+      			}
+      		],
+      		"name": "bet",
+      		"outputs": [],
+      		"payable": true,
+      		"stateMutability": "payable",
+      		"type": "function"
+      	},
+      	{
+      		"constant": false,
+      		"inputs": [],
+      		"name": "distributePrizes",
+      		"outputs": [],
+      		"payable": false,
+      		"stateMutability": "nonpayable",
+      		"type": "function"
+      	},
+      	{
+      		"constant": false,
+      		"inputs": [],
+      		"name": "generateWinningNumber",
+      		"outputs": [
+      			{
+      				"name": "",
+      				"type": "uint256"
+      			}
+      		],
+      		"payable": false,
+      		"stateMutability": "nonpayable",
+      		"type": "function"
+      	},
+      	{
+      		"constant": false,
+      		"inputs": [],
+      		"name": "resetData",
+      		"outputs": [],
+      		"payable": false,
+      		"stateMutability": "nonpayable",
+      		"type": "function"
+      	},
+      	{
+      		"inputs": [],
+      		"payable": false,
+      		"stateMutability": "nonpayable",
+      		"type": "constructor"
+      	}
          ]);
          this.state.ContractInstance = MyContract.at("0xe3be847d5516ebcc7b6bdffe9dd65f61d551dc87");
          window.a = this.state;
@@ -280,17 +88,10 @@ class App extends React.Component {
    }
 
    updateState(){
-      this.state.ContractInstance.minimumBet((err, result) => {
+      this.state.ContractInstance.timeStart((err, result) => {
          if(result != null){
             this.setState({
-               minimumBet: parseFloat(web3.fromWei(result, 'ether'))
-            })
-         }
-      })
-      this.state.ContractInstance.totalBet((err, result) => {
-         if(result != null){
-            this.setState({
-               totalBet: parseFloat(web3.fromWei(result, 'ether'))
+               timeStart: parseInt(result)
             })
          }
       })
@@ -305,6 +106,13 @@ class App extends React.Component {
          if(result != null){
             this.setState({
                maxAmountOfBets: parseInt(result)
+            })
+         }
+      })
+      this.state.ContractInstance.minAmountOfBets((err, result) => {
+         if(result != null){
+            this.setState({
+               minAmountOfBets: parseInt(result)
             })
          }
       })
@@ -364,18 +172,13 @@ class App extends React.Component {
                   </div>
 
                   <div className="block">
-                     <b>Last number winner:</b> &nbsp;
-                     <span>{this.state.lastWinner}</span>
-                  </div>
-
-                  <div className="block">
                      <b>Total ether bet:</b> &nbsp;
-                     <span>{this.state.totalBet} ether</span>
+                     <span>{this.state.timeStart} ether</span>
                   </div>
 
                   <div className="block">
                      <b>Minimum bet:</b> &nbsp;
-                     <span>{this.state.minimumBet} ether</span>
+                     <span>{this.state.minAmountOfBet} ether</span>
                   </div>
 
                   <div className="block">
